@@ -13,7 +13,7 @@ import theme from './src/global/styles/theme';
 
 import { Dashboard } from './src/screens/Dashboard';
 import { Register } from './src/screens/Register';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -27,7 +27,11 @@ export default function App() {
   }, []);
 
   if (!fontsLoaded) {
-    return <Text>Carregando fontes...</Text>;
+    return ( 
+      <View>
+        <Text>Carregando fontes...</Text>
+      </View>
+    );
   }
 
   return (
